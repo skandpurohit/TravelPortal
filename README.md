@@ -69,5 +69,4 @@ If you want, I can add a sample `gitlab-ci.yml`, `drone.yml`, or a minimal Jenki
 - Helm chart: `helm-charts/`
 - Web UI: `web/` (login at `login.html`, main app at `/`)
 
----
-If you'd like, I can add a small CI example for your specific CI system or add a PVC example to the Helm chart — tell me which one and I'll implement it.
+
