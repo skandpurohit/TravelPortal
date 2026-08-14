@@ -1,9 +1,14 @@
 FROM golang:1.25-alpine AS builder
 
+ARG GOPROXY="https://proxy.golang.org"
+ENV GOPROXY=${GOPROXY}
+ENV GO111MODULE=on
+
 WORKDIR /app
 
 COPY go.mod go.sum ./
-RUN go mod download
+# cache modules during CI-friendly builds
+RUN go env -w GOPROXY=${GOPROXY} && go mod download
 
 COPY . .
 
@@ -16,6 +21,8 @@ RUN go build -ldflags "-s -w" -o /app/main .
 
 FROM alpine:3.18
 
+LABEL org.opencontainers.image.source="https://example.com/your-repo"
+
 RUN apk add --no-cache ca-certificates
 
 WORKDIR /app
@@ -23,12 +30,17 @@ WORKDIR /app
 COPY --from=builder /app/main .
 COPY --from=builder /app/web ./web
 
-RUN chmod +x /app/main
+# Create non-root user for safer runtime in CI/CD environments
+RUN addgroup -S app && adduser -S app -G app \
+	&& chown -R app:app /app \
+	&& chmod +x /app/main
 
 ENV TODO_PORT=7540
 ENV TODO_DBFILE=scheduler.db
 ENV TODO_PASSWORD=test12345
 
 EXPOSE 7540
+
+USER app
 
 CMD ["/app/main"]
