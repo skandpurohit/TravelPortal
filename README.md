@@ -69,4 +69,6 @@ If you want, I can add a sample `gitlab-ci.yml`, `drone.yml`, or a minimal Jenki
 - Helm chart: `helm-charts/`
 - Web UI: `web/` (login at `login.html`, main app at `/`)
 
-
+## Updates 
+- Enhance login
+- Enable Secret Injection
