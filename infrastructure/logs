@@ -142,3 +142,10 @@ Events:
   Normal  Pulled     3m42s  kubelet            spec.initContainers{vault-agent-init}: Container image "projects.packages.broadcom.com/vsphere/iaas/secret-store-service/9.1.0.0100/secret-store-service@sha256:c5f1a7f8c9f3dca295e39c0af92f00d38b29e48ea1ef1bffd66ce5058ddd9840" already present on machine and can be accessed by the pod
   Normal  Created    3m41s  kubelet            spec.initContainers{vault-agent-init}: Container created
   Normal  Started    3m41s  kubelet            spec.initContainers{vault-agent-init}: Container started
+
+
+
+
+## vault-agent-init container logs
+
+ agent.auth.handler: error authenticating: error="Put \"https://secret-store-service.vks-vault-injector.svc.cluster.local:8200/v1/auth/kubernetes-w01-sup_ns01-workload-vsphere-vks1/login\": tls: failed to verify certificate: x509: certificate is valid for secret-store-service.svc-secret-store-mfunc.svc.cluster.local, secret-store.svc-secret-store-mfunc.svc.cluster.local, secret-store, secret-store-service, localhost, not secret-store-service.vks-vault-injector.svc.cluster.local" backoff=3m52.11s
