@@ -13,6 +13,14 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "cnSZIlbMRku59W_PEY50XQ"
 
+
+# annotation : configuration for vault-injector
+annotations: 
+  vault.hashicorp.com/agent-inject: "true"
+  vault.hashicorp.com/role: "w01-sup_ns01-workload-vsphere-vks1"
+  vault.hashicorp.com/auth-path: "auth/kubernetes-w01-sup_ns01-workload-vsphere-vks1"
+  vault.hashicorp.com/agent-inject-secret-config.txt: "secret/data/ns01/login-secret"
+
 env:
   #todoPort: 7540
   #todoDbFile: scheduler.db
