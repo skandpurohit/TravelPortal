@@ -20,6 +20,7 @@ podAnnotations:
   vault.hashicorp.com/role: "w01-sup_ns01-workload-vsphere-vks1"
   vault.hashicorp.com/auth-path: "auth/kubernetes-w01-sup_ns01-workload-vsphere-vks1"
   vault.hashicorp.com/agent-inject-secret-config.txt: "secret/data/ns01/login-secret"
+  vault.hashicorp.com/tls-skip-verify: "true"
 
 env:
   #todoPort: 7540
