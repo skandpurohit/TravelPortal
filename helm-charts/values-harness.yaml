@@ -19,7 +19,7 @@ podAnnotations:
   vault.hashicorp.com/agent-inject: "true"
   vault.hashicorp.com/role: "ns01-workload-vsphere-vks1"
   vault.hashicorp.com/auth-path: "auth/kubernetes-ns01-workload-vsphere-vks1"
-  vault.hashicorp.com/agent-inject-secret-config.txt: "secret/data/ns01/login-secret"
+  vault.hashicorp.com/agent-inject-secret-config.txt: "secret/data/ns01/workload-vsphere-vks1-login-secret"
   vault.hashicorp.com/tls-skip-verify: "true"
 
 env:
