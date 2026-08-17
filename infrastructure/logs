@@ -148,13 +148,6 @@ Events:
 
 ## vault-agent-init container logs
 
-2026-08-17T00:21:34.573Z [WARN]  agent: (view) vault.read(secret/data/ns01/login-secret): vault.read(secret/data/ns01/login-secret): Error making API request.
+2026-08-17T00:57:40.499Z [ERROR] agent.auth.handler: error authenticating: error="Put \"https://secret-store-service.vks-vault-injector.svc.cluster.local:8200/v1/auth/kubernetes-ns01-workload-vsphere-vks1/login\": dial tcp: lookup secret-store-service.vks-vault-injector.svc.cluster.local on 240.1.0.10:53: no such host" backoff=1m33.07s
 
-URL: GET https://secret-store-service.vks-vault-injector.svc.cluster.local:8200/v1/secret/data/ns01/login-secret
-Code: 403. Errors:
-
-* 1 error occurred:
-        * permission denied
-
- (retry attempt 9 after "1m0s")
 
