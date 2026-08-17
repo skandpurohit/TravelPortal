@@ -60,8 +60,14 @@ pipeline:
                 spec:
                   artifacts:
                     primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
+                      primaryArtifactRef: <+artifact.image>
+                      sources:
+                        - identifier: dockerImage
+                          type: DockerRegistry
+                          spec:
+                            connectorRef: artifactorydockerconnector
+                            image: design-libraries-docker-dev-local.artifactory.vcfd.broadcom.net/todoservice
+                            tag: <+pipeline.executionId>
           environment:
             environmentRef: spenv
             deployToAll: false
