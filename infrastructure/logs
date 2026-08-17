@@ -151,3 +151,8 @@ Events:
 2026-08-17T00:57:40.499Z [ERROR] agent.auth.handler: error authenticating: error="Put \"https://secret-store-service.vks-vault-injector.svc.cluster.local:8200/v1/auth/kubernetes-ns01-workload-vsphere-vks1/login\": dial tcp: lookup secret-store-service.vks-vault-injector.svc.cluster.local on 240.1.0.10:53: no such host" backoff=1m33.07s
 
 
+# deploy stage error
+
+Failed to fetch artifacts. Unable to fetch the given tag for the image. The tag provided for the image may be incorrect.. Unable to fetch the given tag for the image. The tag provided for the image may be incorrect.. Failed to fetch tags for image. Check if the image details are correct. Check if the image exists, the permissions are scoped for the authenticated user & check if the right connector chosen for fetching tags for the image. . Failed to fetch tags for image. Check if the image details are correct. Check if the image exists, the permissions are scoped for the authenticated user & check if the right connector chosen for fetching tags for the image. . Failed to fetch tags for image. Check if the image details are correct. Check if the image exists, the permissions are scoped for the authenticated user & check if the right connector chosen for fetching tags for the image. . Failed to fetch tags for image. Check if the image details are correct. Check if the image exists, the pe..truncated
+
+
