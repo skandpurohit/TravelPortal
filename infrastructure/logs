@@ -148,7 +148,7 @@ Events:
 
 ## vault-agent-init container logs
 
-2026-08-16T23:58:19.429Z [ERROR] agent.auth.handler: error authenticating:
+2026-08-17T00:05:38.807Z [ERROR] agent.auth.handler: error authenticating:
   error=
   | Error making API request.
   |
@@ -156,4 +156,5 @@ Events:
   | Code: 403. Errors:
   |
   | * permission denied
-   backoff=20s
+   backoff=10.85s
+
