@@ -13,7 +13,7 @@ import (
 )
 
 func (h *Handlers) HandleSignIn(res http.ResponseWriter, req *http.Request) {
-	pass := config.TODO_PASS
+	pass := config.GetPassword()
 	if len(pass) == 0 {
 		utils.SendErrorResponse(res, "пароль не установлен", http.StatusInternalServerError)
 		return

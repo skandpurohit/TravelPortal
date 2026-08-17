@@ -9,7 +9,7 @@ import (
 
 func Auth(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		pass := config.TODO_PASS
+		pass := config.GetPassword()
 		if len(pass) > 0 {
 			var jwtToken string
 			cookie, err := r.Cookie("token")

@@ -22,7 +22,7 @@ func isValidToken(tokenString string) bool {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
 		}
-		return []byte(config.TODO_PASS), nil
+		return []byte(config.GetPassword()), nil
 	})
 	if err != nil || !token.Valid {
 		return false
