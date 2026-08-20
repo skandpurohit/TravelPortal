@@ -3,7 +3,7 @@ TAG ?= latest
 REGISTRY ?= quay.io/rahulk10
 CHART_DIR ?= helm-charts
 RELEASE ?= todo-app
-NAMESPACE ?= default
+NAMESPACE ?= travelportal
 
 .PHONY: docker-build docker-push helm-deploy helm-upgrade
 
